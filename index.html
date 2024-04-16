@@ -6,7 +6,7 @@
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="body">
     <div class="header">
         <div class="logo">
             <img src="assets/2.png" alt="">
@@ -16,7 +16,7 @@
         <div class="nav-container">
             <ul class="outer">
                 <li><a href="">HOME</a></li>
-                <li><div><a class="arrow" onclick="blog()">BLOGS<img class="arrow-icon" src="assets/down.png" id="arrow" alt=""></a>
+                <li onclick="mainDropdown()"><div><a class="arrow">BLOGS<img class="arrow-icon" src="assets/down.png" id="arrow" alt=""></a>
                     <div class="popup" id="popup">
                         <ul class="inner">
                             <li><a href="">Travel</a></li>
@@ -36,14 +36,47 @@
             <img src="assets/social media/youtube.png" alt="youtube-icon">
         </div>
 
-        <img class="menu" src="assets/menu-bar.png" alt="">
+        <img class="menu" id="menu-icon" src="assets/menu-bar.png" alt="" onclick="menu()">
+
+        <div class="menu-tab" id="tab">
+            <ul class="outer">
+                <li><a href="">HOME</a></li>
+                <li onclick="subDropdown()"><a class="drop">BLOGS <img src="assets/down.png" id="Arrow" alt=""></a></li>
+                <div class="popup" id="Popup">
+                    <ul class="inner">
+                        <li><a href="">Travel</a></li>
+                        <li><a href="">Game</a></li>
+                    </ul>
+                </div>
+                <li><a href="">ABOUT</a></li>
+            </ul>
+
+            <div class="social">
+                <img src="assets/social media/facebook.png" alt="facebook-icon">
+                <img src="assets/social media/instagram.png" alt="instagram-icon">
+                <img src="assets/social media/telegram.png" alt="telegram-icon">
+                <img src="assets/social media/youtube.png" alt="youtube-icon">
+            </div>
+        </div>
     </div>
 
     <div class="body">
         <img class="tree" style="z-index: 9;" src="assets/homepage/images-removebg-preview.png" alt="floating-tree-bg">
         <img class="mountain" style="z-index: 7;" src="assets/homepage/images__2_-removebg-transformed.png" alt="lake-mountain-bg">
         <img class="cloud" style="z-index: 8;" src="assets/homepage/cloud-removebg-preview.png" alt="moving-cloud-bg">
-        <h1 id="welcome">WELCOME TO CN BLOG <br> <span style="font-size:1.5dvw;">My Adventures, Experiences in Life!</span></h1>
+        <h1 id="welcome">WELCOME TO CN BLOG <br> <span style="font-size:2dvw;">My Adventures, Experiences in Life!</span></h1>
+    </div>
+    
+    <div class="Adventures">
+      <h1>My Adventures</h1>
+      <div class="img-container">
+        <div class="img-container1">
+          <h2>Game Blog</h2>
+        </div>
+        <div class="img-container2">
+          <h2>Travel Blog</h2>
+        </div>
+      </div>
     </div>
 
     <div class="content1">
@@ -52,7 +85,7 @@
         </div>
         <div class="text">
             <h1 class="name" style="font-size: 4dvw;">I'm <span class="myname">Clark N. Neri</span></h1>
-            <h1 style="font-size: 14px;">BSIT Student in Gingoog City Colleges Inc.</h1>
+            <h1 style="font-size: 2dvw;">BSIT Student in Gingoog City Colleges Inc.</h1>
             <br>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima fuga, expedita architecto nobis dolorem laborum exercitationem adipisci. 
                 Nihil ad sed error omnis quod possimus, quibusdam, recusandae libero, dolores ipsa nemo.

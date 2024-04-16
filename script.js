@@ -1,11 +1,22 @@
 let angle = 0;
 let direction = 1;
 
-const blog = () =>{
+const mainDropdown = () =>{
     const navPopup = document.getElementById('popup');
     navPopup.style.display = navPopup.style.display === "block" ? "none" : "block";
 
     const icon = document.getElementById('arrow')
+    angle += 180 * direction;
+    icon.style.transform = `rotate(${angle}deg)`;
+    icon.style.transition = '0.5s';
+    direction *= -1;
+}
+
+const subDropdown = () =>{
+    const navPopup = document.getElementById('Popup');
+    navPopup.style.display = navPopup.style.display === "block" ? "none" : "block";
+
+    const icon = document.getElementById('Arrow')
     angle += 180 * direction;
     icon.style.transform = `rotate(${angle}deg)`;
     icon.style.transition = '0.5s';
@@ -47,3 +58,30 @@ document.addEventListener("DOMContentLoaded", ()=>{
         checkvisibility()
     })
 })
+
+//menu bar
+const menu = () =>{
+    const menuIcon = document.getElementById('menu-icon')
+    angle += 180 * direction;
+    menuIcon.style.transform = `rotate(${angle}deg)`;
+    menuIcon.style.transition = '0.5s';
+    direction *= -1;
+
+    const tab = document.getElementById("tab")
+    tab.style.display = tab.style.display === "block" ? "none" : "block";
+}
+
+// to display none the menu popup when it is not closed
+window.onload = function(){
+    var div = document.getElementById('tab')
+
+    function checkWidth(){
+        var deviceWidth = window.innerWidth;
+        if(deviceWidth > 900){
+            div.style.display = "none";
+        }
+    }
+
+    checkWidth();
+    window.addEventListener('resize',checkWidth)
+}

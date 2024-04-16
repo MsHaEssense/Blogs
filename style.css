@@ -2,6 +2,10 @@
     font-family: monospace, arial;
 }
 
+body{
+    margin: 0;
+}
+
 /* -------------------------------------------HEADER------------------------------------ */
 .header{   
     display: flex;
@@ -17,23 +21,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px 30px;
+    margin: 1dvw 3dvw;
 }
 
 .logo img{
-    width: 6dvw;
-    height: 6dvw;
+    width: 4dvw;
+    height: 4dvw;
     border-radius: 50%;
 }
 
 .logo h1{
-    font-size: 24px;
+    font-size: 2dvw;
     color: white;
     cursor: default;
 }
 
 .logo img, h1{
-    margin: 0 10px;
+    margin: 0 1dvw;
 }
 
 .nav-container{
@@ -60,26 +64,30 @@
     display: inline-block;
     margin: 0 2dvw;
     position: relative;
+    cursor: pointer;
 }
 .nav-container .inner li{
     list-style: none;
     margin: 10px 0;
-    margin-left: -40px;
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-container .inner{
+    padding: 0;
+    text-align: center;
 }
 
 .nav-container .popup{
-    padding: 8px 20px;
+    padding: 1dvw 1.5dvw;
     background-color: #5a6a83;
     position: absolute;
     width: 80%;
-    left: -12px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    display: none;
     z-index: 9;
+    left: -1.5dvw;
+    animation: toppopup 0.5s;
+    display: none;
 }
-
 .nav-container ul li::after{
     content: '';
     height: 5px;
@@ -96,20 +104,23 @@
     width: 100%;
 }
 
+.nav-container .outer:not(:hover) > li:first-child::after{
+    width: 100%;
+} 
 
 a{
-    font-size: 20px;
+    font-size: 1.5dvw;
     text-decoration: none;
     color: white;
     cursor: pointer;
 }
-
 .menu{
-    width: 8dvw;
+    margin: 0 4dvw;
+    width: 4dvw;
     height: auto;
     display: none;
-    margin: 0 50px;
 }
+
 
 .social-media{
     display: flex;
@@ -130,13 +141,115 @@ a{
     transform: scale(1.5);
 }
 
+@keyframes toppopup {
+    from{
+        top: -50%;
+        opacity: 0.5;
+    }
+    to{
+        top: 100%;
+        opacity: 1;
+    }
+}
+
 /* -----------------------------------------HEADER-------------------------------------------- */
 
+/* -------------------------------------------MENU tab---------------------------------------- */
+.menu-tab{
+    background-color: rgb(90, 106, 131, 1);
+    position: absolute;
+    z-index: 11;
+    width: 30%;
+    height: 60vh;
+    right: 0;
+    top: 100%;
+    display: none;
+    animation: slide 0.5s;
+}
+
+.menu-tab ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.menu-tab ul li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.menu-tab ul li a{
+    margin: 10px 0;
+    font-size: 2.5dvw;
+}
+
+.menu-tab ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #9cd54a;
+    bottom: -5px;
+    transition: 0.5s;
+}
+
+.menu-tab .outer li:hover::after {
+    width: 50%;
+}
+
+.menu-tab .outer:not(:hover) > li:first-child::after{
+    width: 50%;
+}
+
+.menu-tab .outer .popup{
+    background-color: #4c5668;
+    display: none;
+}
+
+.menu-tab ul li a img{
+    width: 2dvw;
+    height: 2dvw;
+    margin-left: 5px;
+}
+
+.menu-tab .social{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 90%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-tab .social img{
+    width: 3dvw;
+    height: 3dvw;
+    transition: transform 0.3s ease-in-out; 
+
+}.menu-tab .social img:hover{
+    transform: scale(1.2);
+}
+
+.menu-tab .drop{
+    display: flex;
+    align-items: center;
+}
+
+.menu-tab img{
+    filter: invert();
+}
+
+@keyframes slide {
+    from{right: -50%}
+    to{right:0}
+}
+/* --------------------------------------------MENU tab---------------------------------------- */
 
 /* ------------------------------------------BODY----------------------------------------------- */
 .body{
     position: relative;
-    padding: 10dvw 0;
+    padding: 7dvw 0;
     background-color: #7394a4;
     display: flex;
     align-items: end;
@@ -162,11 +275,11 @@ a{
     bottom: -10%;
     filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
 
-    animation: floatAnimation 1s infinite alternate;
+    animation: floatAnimation 2s infinite alternate;
 }
 
 .body .mountain{
-    width: 80%;
+    width: 90%;
     height: auto;
     margin: -30% 0;
     filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5));
@@ -207,18 +320,55 @@ a{
         transform: translateY(0);
     }
     100%{
-        transform: translateY(-20px);
+        transform: translateY(-10px);
     }
 }
 /* -------------------------------------------BODY----------------------------------------------- */
+
+/* ----------------------------------------------Blogs--------------------------------------------- */
+.Adventures{
+  width: 100%;
+  height: 100dvw;
+  padding: 15dvw 0;
+  margin: 5dvw dvw;
+  text-align: center;
+}
+
+.Adventures h1{
+  font-size: 5dvw;
+}
+
+.Adventures .img-container{
+  width: 100%;
+  height: 100%;
+}
+
+.Adventures .img-container h2{
+    font-size: 4dvw;
+}
+
+.Adventures .img-container .img-container1{
+  height: 50%;
+  margin: 5dvw 0;
+  background-color: #7394a4;
+  color: white;
+}
+
+.Adventures .img-container .img-container2{
+  height: 50%;
+  margin: 5dvw 0;
+  background-color: #7394a4;
+  color: white;
+}
+
+/* --------------------------------------------Blogs---------------------------------------- */
 
 /* -------------------------------------------CONTENT1------------------------------------- */
 .content1{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15dvw 0;
-    margin: 20px 5dvw;
+    margin: 15dvw 3dvw;
     opacity: 0;
     transition: 1.5s;
 }
@@ -229,6 +379,7 @@ a{
     border-radius: 50%;
     box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.5);
     margin-right: 3dvw;
+    margin-top: 1dvw;
 }
 
 .content1 .text{
@@ -251,7 +402,7 @@ a{
 }
 
 .content1 .socials img{
-    width: 20px;
+    width: 3dvw;
     margin-right: 10px;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
@@ -263,6 +414,7 @@ a{
 
 .text p{
     text-justify: auto;
+    font-size: 2dvw;
 }
 
 /* --------------------------------------------CONTENT1-------------------------------------- */
@@ -278,6 +430,7 @@ a{
 }
 
 .copyright h4{
+    font-size: 1.5dvw;
     cursor: default;
 }
 
@@ -285,6 +438,16 @@ a{
 
 @media screen and (max-width : 900px) {
 
+    .header{
+        transition: 0.5s;
+    }
+    .logo h1{
+        font-size: 3dvw;
+    }
+    .logo img{
+        width: 5dvw;
+        height: 5dvw;
+    }
     .nav-container{
         display: none;
     }
@@ -296,4 +459,14 @@ a{
     .social-media{
         display: none;
     }
+
+    .content1{
+        flex-wrap: wrap;
+    }
+
+    .content1 .img{
+        margin: 10dvw 0;
+        margin-top: -5dvw;
+    }
+
 }
