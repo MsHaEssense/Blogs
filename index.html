@@ -3,105 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>HOMEPAGE</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body id="body">
-    <div class="header">
-        <div class="logo">
+<body>
+    <div class="header" id="header">
+        <div class="logo-img">
             <img src="assets/2.png" alt="">
             <h1>CN|BLOG</h1>
         </div>
 
-        <div class="nav-container">
-            <ul class="outer">
-                <li><a href="">HOME</a></li>
-                <li onclick="mainDropdown()"><div><a class="arrow">BLOGS<img class="arrow-icon" src="assets/down.png" id="arrow" alt=""></a>
-                    <div class="popup" id="popup">
-                        <ul class="inner">
-                            <li><a href="">Travel</a></li>
-                            <li><a href="">Game</a></li>
+        <div class="navigation-holder" id="menu-popup">
+            <div class="nav-container">
+                <ul id="navigation">
+                    <li class="nav-link active" onclick="home(document.getElementById('homepage'))"><a>HOME</a></li>
+                    <li><a class="products" onclick="popup1()">BLOGS<img class="dropdown-arrow" id="arrow1" src="assets/down.png"></a>
+                        <ul class="nav-popup" id="popup1">
+                            <li class="nav-link" onclick="game(document.getElementById('game-blog'))"><a>Game</a></li>
+                            <li class="nav-link" onclick="travel(document.getElementById('travel-blog'))"><a>Travel</a></li>
                         </ul>
-                    </div>
-                </div>
-                </li>
-                <li><a href="">ABOUT</a></li>
-            </ul>
+                    </li>
+                    <li class="nav-link" onclick="smoothScroll(document.getElementById('aboutUs'))"><a>ABOUT</a></li>
+                </ul>
+            </div>
         </div>
 
-        <div class="social-media">
-            <img src="assets/social media/facebook.png" alt="facebook-icon">
-            <img src="assets/social media/instagram.png" alt="instagram-icon">
-            <img src="assets/social media/telegram.png" alt="telegram-icon">
-            <img src="assets/social media/youtube.png" alt="youtube-icon">
+        <img src="assets/menu-bar.png" class="menu-bar" id="rotate" onclick="toggleMenu()">
+    </div>
+
+    <div id="homepage">
+        <div class="body">
+            <h1 id="welcome">WELCOME TO CN BLOG <br> <span style="font-size:2dvw;">My Adventures, Experiences in Life!</span></h1>
         </div>
 
-        <img class="menu" id="menu-icon" src="assets/menu-bar.png" alt="" onclick="menu()">
-
-        <div class="menu-tab" id="tab">
-            <ul class="outer">
-                <li><a href="">HOME</a></li>
-                <li onclick="subDropdown()"><a class="drop">BLOGS <img src="assets/down.png" id="Arrow" alt=""></a></li>
-                <div class="popup" id="Popup">
-                    <ul class="inner">
-                        <li><a href="">Travel</a></li>
-                        <li><a href="">Game</a></li>
-                    </ul>
+        <div class="third-body">
+            <div><h3>About my Experience</h3></div>
+            <div class="product-container">
+                <div class="img-center">
+                    <img src="assets/callOfDuty/Call-of-Duty_Anniversary_EN_1.png" onclick="gameBlog()" alt="">
+                    <h4>Game</h4>
                 </div>
-                <li><a href="">ABOUT</a></li>
-            </ul>
+                <div class="img-center">
+                    <img src="assets/claveria.jpg" alt="">
+                    <h4>Travel</h4>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div id="game-blog">
+        <div class="blog-container">
+            <div class="main-blog">
+                <div class="main">
+                    <img class="img1" src="assets/callOfDuty/callOfDuty1.webp" alt="">
+                    <h2>Title: My Call of Duty Journey: Embracing the Thrill of Search and Destroy</h2>
+                    <h3>Introduction:</h3>
+                    <p>Welcome to my Call of Duty journey! As an avid gamer and a passionate fan of the series, 
+                        I've spent countless hours immersed in the fast-paced action and intense competition of Call of Duty. 
+                        Among the various game modes available, one has captured my heart and become my battleground of 
+                        choice - Search and Destroy.
+                    </p>
+                    <h3>Embracing Search and Destroy:</h3>
+                    <p>In the chaotic world of Call of Duty multiplayer, Search and Destroy stands out as a true test of skill and strategy. 
+                        The tension is palpable as teams face off in a high-stakes battle of wits and reflexes. 
+                        With only one life per round, every move counts, making each match an adrenaline-fueled experience like no other.
+                    </p>
+                    <img src="assets/callOfDuty/callOfDuty2.avif" alt="">
+                    <h3>Mastering the Art of Ranked Play:</h3>
+                    <p>Ranked multiplayer is where I truly shine in Call of Duty. Whether it's in standard multiplayer or the exhilarating 
+                        battle royale mode, I've climbed the ranks to reach the pinnacle of competitive gaming - Legendary status. 
+                        Both in multiplayer and battle royale, I've proven my skills time and again, rising through the ranks with 
+                        determination and skill.
+                    </p>
+                    <h3>The Pulse-Pounding Rush of Competition:</h3>
+                    <p>What draws me to Search and Destroy is not just the thrill of victory, but the intense mental challenge it offers. 
+                        From carefully planning our team's strategy to executing split-second decisions under pressure, every round is
+                        a test of our teamwork and individual prowess. And when victory is secured, the rush of triumph is unmatched.
+                    </p>
+                    <h3>Beyond the Battlefield:</h3>
+                    <p>But Call of Duty isn't just about the battles; it's also about the camaraderie forged in the fires of combat. 
+                        Whether teaming up with friends or facing off against rivals, the bonds formed on the virtual battlefield are 
+                        as real as any forged in the real world. And it's these connections that keep me coming back for more, 
+                        match after match
+                    </p>
+                    <h3>Conclusion:</h3>
+                    <p>In the world of Call of Duty, every match is a chance to prove myself, to push my limits, and to experience the 
+                        thrill of victory. And as I continue my journey, I look forward to facing new challenges, forging new friendships, 
+                        and embracing the excitement of the game that has captured my heart.
+                    </p>
+                </div>
+            </div>
+            <div class="sub-blog">
+                <img src="assets/callOfDuty/Call-of-Duty_Anniversary_EN_1.png" alt="">
+                <h3>Title: Exploring Call of Duty Mobile: A Thrilling Mobile Gaming Experience</h3>
+                <h4>Introduction:</h4>
+                <p>Step into the adrenaline-fueled world of Call of Duty Mobile, where the action-packed gameplay of the iconic franchise
+                    is now available at your fingertips. Developed by Tencent Games and published by Activision, Call of Duty Mobile 
+                    brings the fast-paced, multiplayer mayhem of the popular franchise to your mobile device
+                </p>
+                <h4>Game Modes:</h4>
+                <p>
+                    Call of Duty Mobile offers a variety of game modes to cater to different playstyles and preferences. 
+                    From classic modes like Team Deathmatch, Domination, and Search and Destroy to unique experiences like Gun Game 
+                    and Battle Royale, there's something for everyone. Whether you prefer intense, close-quarters combat or the thrill 
+                    of survival in a vast battlefield, Call of Duty Mobile delivers.
+                </p>
+                <h4>Customization and Progression:</h4>
+                <p>In Call of Duty Mobile, players can customize their loadouts with a wide range of weapons, attachments, perks, and 
+                    scorestreaks to suit their playstyle. As you play and progress, you'll unlock new weapons, equipment, and customization 
+                    options, allowing you to further tailor your experience to your preferences.
+                </p>
+                <h4>Ranked Play:</h4>
+                <p>
+                    For those seeking a competitive challenge, Call of Duty Mobile features a ranked mode where players can test their skills 
+                    against others in intense, skill-based matches. Climb the ranks, earn rewards, and prove yourself as one of the top 
+                    players in the world.
+                </p>
+                <h4>Events and Challenges:</h4>
+                <p>
+                    Stay engaged with regular events, challenges, and limited-time modes that offer unique rewards and opportunities for 
+                    progression. Whether it's a seasonal event, a themed playlist, or a special challenge, there's always something new to 
+                    experience in Call of Duty Mobile
+                </p>
+                <h4>Community and Social Features:</h4>
+                <p>Join forces with friends and fellow players in clans, compete in clan wars, and participate in social features like 
+                    voice chat and in-game messaging. Connect with players from around the world, form alliances, and dominate the 
+                    battlefield together.
+                </p>
+                <h4>Conclusion:</h4>
+                <p>With its fast-paced gameplay, variety of modes, and deep customization options, Call of Duty Mobile offers a thrilling mobile 
+                    gaming experience that captures the essence of the beloved franchise. Whether you're a seasoned veteran or a newcomer 
+                    to the series, Call of Duty Mobile has something for everyone, making it a must-play for fans of action-packed 
+                    multiplayer games on the go
+                </p>
+            </div>
+        </div>
+        <div class="video-container">
+            <h1>Videos</h1>
+            <h2>My MVP moments</h2>
+            <video controls muted>
+                <source src="assets/callOfDuty/Screen_Recording_20240127_223752.mp4">
+            </video>
+            <video controls muted>
+                <source src="assets/callOfDuty/Screen_Recording_20240202_202209.mp4">
+            </video>
+            <video controls muted>
+                <source src="assets/callOfDuty/Screen_Recording_20240202_223321.mp4">
+            </video>
+            <video controls muted>
+                <source src="assets/callOfDuty/Screen_Recording_20240214_231120.mp4">
+            </video>
+            <video controls muted>
+                <source src="assets/callOfDuty/Screen_Recording_20240215_150637.mp4">
+            </video>
+            <video controls muted>
+                <source src="assets/callOfDuty/Screen_Recording_20240221_231234.mp4">
+            </video>
+        </div>
+    </div>
+
+    <div id="travel-blog">
+        <h1>Travel</h1>
+    </div>
+
+    <div class="about" id="aboutUs">
+        <h1 class="title">About Me</h1>
+        <div class="content1">
+            <div class="img">
+                <img src="assets/me/IMG_20230316_093600_184.jpg" alt="Me">
+            </div>
+            <div class="text">
+                <h1 class="name" style="font-size: 4dvw;">I'm <span class="myname">Clark N. Neri</span></h1>
+                <h1 style="font-size: 2dvw;">BSIT Student in Gingoog City Colleges Inc.</h1>
+                <p>A passionate gamer and traveler with a love for sharing experiences.
+                </p>
+                <h1 style="font-size: 2dvw;">
+                    Why I Started This Website?
+                </h1>
+                <p>I aim to demonstrate my understanding of web development principles and techniques learned throughout the course.
+                    By creating this website for my school project.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact">
+        <h1>Contact Me</h1>
+        <div class="contact-container">
+            <div class="email">
+                <h3>Email <img src="assets/social media/email.png" width="20" alt=""></h3>
+                <h4>clarkneri99@gmail.com</h4>
+            </div>
+            <div class="phone">
+                <h3>Phone No. <img src="assets/social media/telephone.png" width="20" alt=""></h3>
+                <h4>0927-6617-226</h4>
+            </div>
             <div class="social">
-                <img src="assets/social media/facebook.png" alt="facebook-icon">
-                <img src="assets/social media/instagram.png" alt="instagram-icon">
-                <img src="assets/social media/telegram.png" alt="telegram-icon">
-                <img src="assets/social media/youtube.png" alt="youtube-icon">
+                <h3>Social Media <img src="assets/social media/share.png" width="20" alt=""></h3>
+                <h4 class="img"><a href="https://www.facebook.com" target="_blank"><img src="assets/social media/facebook.png" alt=""></a> <a href="https://instagram.com" target="_blank"><img src="assets/social media/instagram.png" alt=""></a> <a href="https://discord.com" target="_blank"><img src="assets/social media/discord.png" alt=""></a></h4>
             </div>
         </div>
     </div>
 
-    <div class="body">
-        <img class="tree" style="z-index: 9;" src="assets/homepage/images-removebg-preview.png" alt="floating-tree-bg">
-        <img class="mountain" style="z-index: 7;" src="assets/homepage/images__2_-removebg-transformed.png" alt="lake-mountain-bg">
-        <img class="cloud" style="z-index: 8;" src="assets/homepage/cloud-removebg-preview.png" alt="moving-cloud-bg">
-        <h1 id="welcome">WELCOME TO CN BLOG <br> <span style="font-size:2dvw;">My Adventures, Experiences in Life!</span></h1>
-    </div>
-    
-    <div class="Adventures">
-      <h1>My Adventures</h1>
-      <div class="img-container">
-        <div class="img-container1">
-          <h2>Game Blog</h2>
-        </div>
-        <div class="img-container2">
-          <h2>Travel Blog</h2>
-        </div>
-      </div>
-    </div>
-
-    <div class="content1">
-        <div class="img">
-            <img src="assets/me/IMG_20230316_093600_184.jpg" alt="Me">
-        </div>
-        <div class="text">
-            <h1 class="name" style="font-size: 4dvw;">I'm <span class="myname">Clark N. Neri</span></h1>
-            <h1 style="font-size: 2dvw;">BSIT Student in Gingoog City Colleges Inc.</h1>
-            <br>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima fuga, expedita architecto nobis dolorem laborum exercitationem adipisci. 
-                Nihil ad sed error omnis quod possimus, quibusdam, recusandae libero, dolores ipsa nemo.
-            </p>
-            <br>
-
-            <div class="socials">
-                <img src="assets/social media/facebook.png" alt="facebook-icon">
-                <img src="assets/social media/instagram.png" alt="instagram-icon">
-                <img src="assets/social media/telegram.png" alt="telegram-icon">
-                <img src="assets/social media/youtube.png" alt="youtube-icon">
-            </div>
-        </div>
-    </div>
-
-    <div class="copyright">
+    <div class="footer">
         <h4>2024 © Copyright.CN Blog All Rights Reserved</h4>
     </div>
 
