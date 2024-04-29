@@ -112,10 +112,11 @@ body{
 
 @media  screen and (max-width : 1100px) {
     .navigation-holder{
+        display: none;
         position: absolute;
         top: 100%;
         right: 0;
-        width: 50%;
+        width: 40%;
         animation: slide 0.5s;
         background-color: #4A628B;
     }
@@ -129,8 +130,9 @@ body{
     .navigation-holder .nav-container ul li{
         display: flex;
         flex-direction: column;
-        margin: 2dvw 0;
+        margin: 3dvw 0;
     }
+
 
     .navigation-holder .nav-container .nav-popup{
         background-color: #222936;
@@ -277,7 +279,7 @@ body{
 .img-center h4{
     width: 70%;
     margin: auto;
-    font-weight: lighter;
+    font-weight: 500;
     font-size: 2dvw;
 }
 
@@ -439,7 +441,7 @@ body{
 
 .contact .contact-container h4{
     font-size: 1.5dvw;
-    font-weight: 100;
+    font-weight: 500;
     display: flex;
     justify-content: space-around;
 }
@@ -453,12 +455,16 @@ body{
     flex-direction: column;
 }
 
+.contact .contact-container .email h3 img,.phone h3 img,.social h3 img{
+    width: 2dvw;
+}
+
 .contact .contact-container .social .img img{
-    width: 1.5dvw;
+    width: 2dvw;
 }
 
 .contact .contact-container h3{
-    font-size: 2dvw;
+    font-size: 3dvw;
 }
 /* ---------------------------------------------Contact------------------------------------ */
 
@@ -469,11 +475,63 @@ body{
 }
 
 .footer h4{
-    font-size: 1dvw;
+    font-size: 14px;
     margin: 0;
-    padding: 1dvw 0;
+    padding: 12px 0;
     text-align: center;
     color: white;
 }
 
 /* -------------------------------------------FOOTER------------------------------------------- */
+
+@media screen and (max-width:600px) {
+
+    .navigation-holder .nav-container ul li a{
+        font-size: 16px;
+    }
+
+    .body h1{
+        font-size: 36px;
+    }
+
+    .third-body h3{
+        font-size: 22px;
+    }
+
+    .third-body h4{
+        font-size: 16px;
+    }
+
+    .about .title{
+        font-size: 24px;
+    }
+
+    .about .content1 .text p{
+        font-size: 14px;
+    }
+
+    .contact h1{
+        font-size: 18px;
+    }
+
+    .contact .contact-container h3{
+        font-size: 12px;
+    }
+
+    .contact .contact-container h4{
+        font-size: 12px;
+    }
+
+    .contact .contact-container .email h3 img,.phone h3 img,.social h3 img{
+        width: 12px;
+    }
+
+    .contact .contact-container .social .img img{
+        width: 12px;
+    }
+
+    .footer h4{
+        font-size: 10px;
+    }
+
+}
