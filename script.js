@@ -119,7 +119,7 @@ const home = (target) =>{
     const serum = document.getElementById('game-blog')
     serum.style.display = 'none'
 
-    const soap = document.getElementById('travel-blog')
+    const soap = document.getElementById('food-blog')
     soap.style.display = 'none'
 
         let scrollContainer = target;
@@ -151,7 +151,7 @@ const game = (target) =>{
     const serum = document.getElementById('game-blog')
     serum.style.display = 'block'
 
-    const soap = document.getElementById('travel-blog')
+    const soap = document.getElementById('food-blog')
     soap.style.display = 'none'
 
 
@@ -184,7 +184,7 @@ const gameBlog = (target) =>{
     const serum = document.getElementById('game-blog')
     serum.style.display = 'block'
 
-    const soap = document.getElementById('travel-blog')
+    const soap = document.getElementById('food-blog')
     soap.style.display = 'none'
 
     let scrollContainer = target;
@@ -209,14 +209,14 @@ const gameBlog = (target) =>{
         scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
 }
 
-const travel = (target) =>{
+const food = (target) =>{
     const homepageContainer = document.getElementById('homepage')
     homepageContainer.style.display = 'none'
 
     const serum = document.getElementById('game-blog')
     serum.style.display = 'none'
 
-    const soap = document.getElementById('travel-blog')
+    const soap = document.getElementById('food-blog')
     soap.style.display = 'block'
 
     let scrollContainer = target;

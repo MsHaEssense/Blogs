@@ -355,10 +355,59 @@ body{
 /* ---------------------------------------game----------------------------------------- */
 
 /* ---------------------------------------travel----------------------------------------- */
-#travel-blog{
+#food-blog{
     display: none;
     height: auto;
     position: relative;
+    background-color:#DEE6DE;
+    padding: 1dvw 0;
+}
+
+#food-blog .blog-container{
+    display: flex;
+    height: 350dvh;
+}
+
+#food-blog .blog-container .main-blog{
+    overflow-y: auto;
+    position: relative;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+}
+
+#food-blog .blog-container .main-blog .main{
+    width: 80%;
+}
+
+#food-blog .blog-container .main-blog img{
+    width: 100%;
+}
+
+#food-blog .blog-container .sub-blog{
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    background-color: #BDCDC5;
+    width: 30%;
+    text-align: justify;
+    padding: 0 2dvw;
+}
+
+#food-blog .blog-container .sub-blog img{
+    width: 100%;
+    padding-top: 2dvw;
+}
+
+#food-blog .video-container{
+    padding: 2dvw 5dvw;
+    text-align: center;
+}
+
+#food-blog .video-container video{
+    padding: 3dvw 0;
+    width: 100%;
 }
 /* ---------------------------------------travel----------------------------------------- */
 
