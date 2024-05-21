@@ -352,6 +352,12 @@ body{
     padding: 3dvw 0;
     width: 100%;
 }
+
+#game-blog .video-container iframe{
+    padding: 3dvw 0;
+    width: 100%;
+    height: 600px;
+}
 /* ---------------------------------------game----------------------------------------- */
 
 /* ---------------------------------------travel----------------------------------------- */
@@ -405,9 +411,10 @@ body{
     text-align: center;
 }
 
-#food-blog .video-container video{
+#food-blog .video-container iframe{
     padding: 3dvw 0;
     width: 100%;
+    height: 600px;
 }
 /* ---------------------------------------travel----------------------------------------- */
 
